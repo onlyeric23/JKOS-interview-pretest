@@ -1,4 +1,4 @@
-# JKO Interview Pretest
+# JKOS Interview Pretest
 
 ## Notice!!
 

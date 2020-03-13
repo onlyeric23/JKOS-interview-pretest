@@ -1,12 +1,8 @@
 {
-  "name": "react-ts",
+  "name": "jkos-interview-pretest",
   "version": "1.0.0",
-  "description": "React and TypeScript example starter project",
-  "keywords": [
-    "typescript",
-    "react",
-    "starter"
-  ],
+  "description": "",
+  "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
     "classnames": "2.2.6",
