@@ -1,0 +1,46 @@
+@import './styles/colors.scss';
+
+.App {
+  font-family: sans-serif;
+  padding: 40px;
+  text-align: center;
+
+  h1,
+  .account-types,
+  .notification,
+  .input,
+  .password-input {
+    margin-bottom: 40px;
+  }
+
+  .account-types {
+    display: flex;
+    justify-content: space-between
+  }
+
+  .notification {
+    color: lighten($info, 30%);
+    line-height: 1.5;
+    
+    .type-name {
+      text-transform: lowercase;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .background {
+    width: 100%;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+
+    transform: scale(1.6);
+  }
+}

@@ -1,21 +1,30 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, ComponentType } from "react";
+import classNames from "classnames";
 
 import "./styles.scss";
 
 export interface AccountTypeProps {
   typeName: string;
-  imgSrc: string;
+  icon: ComponentType;
   selected: boolean;
   onSelect: () => void;
 }
 
 const AccountType: FunctionComponent<AccountTypeProps> = ({
   typeName,
-  imgSrc,
+  icon: Icon,
   selected,
   onSelect
 }) => {
-  return <div className="account-type" onClick={onSelect} />;
+  return (
+    <div
+      className={classNames("account-type", { selected })}
+      onClick={onSelect}
+    >
+      <Icon />
+      <div>{typeName}</div>
+    </div>
+  );
 };
 
 export default AccountType;

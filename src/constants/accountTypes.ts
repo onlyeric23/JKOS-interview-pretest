@@ -1,15 +1,15 @@
 import { AccountTypeProps } from "../components/AccountType";
 
-import img_doctor from "../assets/img_doctor_90@3x.svg";
-import img_patient from "../assets/img_patient_90@3x.svg";
+import { ReactComponent as SvgDoctor } from "../assets/img_doctor_90@3x.svg";
+import { ReactComponent as SvgPatient } from "../assets/img_patient_90@3x.svg";
 
-const types: Omit<AccountTypeProps, "selected">[] = [
+const types: Omit<AccountTypeProps, "selected" | "onSelect">[] = [
   {
-    imgSrc: img_doctor,
+    icon: SvgDoctor,
     typeName: "Doctor"
   },
   {
-    imgSrc: img_patient,
+    icon: SvgPatient,
     typeName: "Patient"
   }
 ];

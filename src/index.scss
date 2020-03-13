@@ -1,0 +1,21 @@
+@import './styles/colors.scss';
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  color: $info;
+  margin: 0;
+}
+
+h1 {
+  color: $primary;
+  font-weight: normal;
+  font-size: larger;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
