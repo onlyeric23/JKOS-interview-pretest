@@ -21,4 +21,8 @@ $button-color: $primary;
     background-color: darken($button-color, 10%);
     transform: translateY(3px);
   }
+
+  &:disabled {
+    background-color: lighten($button-color, 20%);
+  }
 }

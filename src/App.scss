@@ -18,7 +18,14 @@
 
   .account-types {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    $gap: 10px;
+    margin: -$gap;
+    > * {
+      margin: $gap;
+    }
   }
 
   .notification {

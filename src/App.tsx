@@ -36,6 +36,7 @@ const mockSubmit = ({ email, password }: Fields) =>
 
 export default function App() {
   const [selectedType, setSelectedType] = useState(accountTypes[0]);
+  const [submitting, setSubmitting] = useState(false);
   const [values, setValues] = useState<Fields>({
     email: "",
     password: ""
@@ -68,11 +69,11 @@ export default function App() {
       event.preventDefault();
       setErrors({});
       if (Object.keys(validate()).length === 0) {
+        setSubmitting(true);
         mockSubmit(values)
-          .then(() => {
-            alert("pass");
-          })
-          .catch(setErrors);
+          .then(() => alert("pass"))
+          .catch(setErrors)
+          .then(() => setSubmitting(false));
       }
     },
     [values, validate]
@@ -128,7 +129,9 @@ export default function App() {
             <div>
               No account? <a href="#tosignup">Signup</a>
             </div>
-            <Button type="submit">Login</Button>
+            <Button type="submit" disabled={submitting}>
+              Login
+            </Button>
           </div>
         </form>
       </div>
