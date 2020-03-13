@@ -9,7 +9,6 @@
   padding: 40px;
 
   h1,
-  .account-types,
   .notification,
   .input,
   .password-input {
@@ -22,7 +21,9 @@
     flex-wrap: wrap;
 
     $gap: 10px;
+
     margin: -$gap;
+    margin-bottom: 40px;
     > * {
       margin: $gap;
     }
